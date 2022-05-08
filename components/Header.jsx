@@ -19,8 +19,8 @@ export default function Header() {
   }
 
   useEffect(() => {
-    setTheme(localStorage.getItem("theme"));
-    !theme && setTheme("dark");
+    setTheme(localStorage.getItem("theme") || "dark");
+    localStorage.setItem("theme", theme);
     document.documentElement.classList.toggle("dark", theme !== "light");
 
     setColor(localStorage.getItem("color") || "red");
