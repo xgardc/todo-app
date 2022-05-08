@@ -19,12 +19,18 @@ export default function Header() {
   }
 
   useEffect(() => {
-    setTheme(localStorage.getItem("theme") || "dark");
-    localStorage.setItem("theme", theme);
+    const localTheme = localStorage.getItem("theme")(
+      localTheme === "dark" || localTheme === "light"
+    )
+      ? setTheme(localTheme)
+      : (() => {
+          setTheme("dark");
+          localStorage.setItem("theme", theme);
+        })();
     document.documentElement.classList.toggle("dark", theme !== "light");
-
     setColor(localStorage.getItem("color") || "red");
-  }, [theme, setTheme, setColor]);
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <header
