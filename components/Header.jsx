@@ -26,10 +26,13 @@ export default function Header() {
           setTheme("dark");
           localStorage.setItem("theme", theme);
         })();
-    document.documentElement.classList.toggle("dark", theme !== "light");
     setColor(localStorage.getItem("color") || "red");
     // eslint-disable-next-line
   }, []);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", theme !== "light");
+  }, [theme]);
 
   return (
     <header
