@@ -13,6 +13,10 @@
 }
 
 @layer components {
+  .container {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-neutral-900 border rounded-md px-5 py-3 w-full h-full sm:w-[600px] sm:h-[640px] md:w-[720px] md:h-[680px] lg:w-[840px] lg:h-[720px] transition-all max-w-[100vw] max-h-screen;
+  }
+
   .color-button {
     @apply w-6 h-6 rounded-full mt-1;
   }

@@ -17,14 +17,14 @@ export default function Component() {
       {!session ? (
         <>
           <main
-            className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-neutral-900 border rounded-md px-5 py-3 w-full h-full sm:w-[600px] sm:h-[640px] md:w-[720px] md:h-[680px] lg:w-[840px] lg:h-[720px] transition-all`}
+            className="container"
             style={{
               borderColor: color,
               boxShadow: `0 0 50px -25px ${color}`,
             }}
           >
             <Header />
-            <div className="flex flex-col items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <div className="flex flex-col items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-black dark:text-white font-semibold tracking-widest">
               Bu uygulamayı kullanmak için giriş yapmalısın!
               <button
                 onClick={() => signIn()}
@@ -38,7 +38,7 @@ export default function Component() {
         </>
       ) : (
         <main
-          className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-neutral-900 border rounded-md px-5 py-3 w-full h-full sm:w-[600px] sm:h-[640px] md:w-[720px] md:h-[680px] lg:w-[840px] lg:h-[720px] transition-all`}
+          className="container"
           style={{
             borderColor: color,
             boxShadow: `0 0 50px -25px ${color}`,

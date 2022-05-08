@@ -26,7 +26,7 @@ export default function Header() {
           setTheme("dark");
           localStorage.setItem("theme", theme);
         })();
-    setColor(localStorage.getItem("color") || "red");
+    setColor(localStorage.getItem("color") || "rgb(220 38 38)");
     // eslint-disable-next-line
   }, []);
 
